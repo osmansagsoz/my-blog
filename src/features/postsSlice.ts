@@ -1,7 +1,8 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import type { PostType, CommentType } from "src/types";
 
-const postsUrl = `${process.env.POSTS_API_BASE_URL}/POSTS`;
+// const postsUrl = `${process.env.POSTS_API_BASE_URL}`;
+const postsUrl = "https://jsonplaceholder.typicode.com";
 
 interface PostsState {
   comments: {
@@ -28,6 +29,7 @@ export const fetchPosts = createAsyncThunk("posts/fetchPosts", async () => {
   try {
     const response = await fetch(`${postsUrl}/posts`);
     const data = await response.json();
+    console.log(data);
     return data;
   } catch (err) {
     console.log(err);
