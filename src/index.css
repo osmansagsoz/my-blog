@@ -166,13 +166,11 @@ nav a {
   display: block;
   padding: 0.5rem;
   text-align: center;
-  background-color: var(--color10);
   border-radius: 5px;
 }
 
 nav a:hover {
-  background-color: var(--color1);
-  color: var(--color5);
+  color: var(--magenta);
 }
 
 main {
@@ -205,4 +203,28 @@ footer {
   background-color: var(--purple);
   padding: 2rem;
   text-align: center;
+}
+
+.about {
+  height: 70vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+.wotm {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.details {
+  padding: 1rem;
+  text-align: center;
+  height: 70vh;
+}
+
+.details h1 {
+  margin: 1rem auto;
 }

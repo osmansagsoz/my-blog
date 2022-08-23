@@ -1,4 +1,8 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import {
+  createSlice,
+  createAsyncThunk,
+  createSelector,
+} from "@reduxjs/toolkit";
 import type { PostType, CommentType } from "src/types";
 
 // const postsUrl = `${process.env.POSTS_API_BASE_URL}`;
@@ -24,6 +28,11 @@ const initialState: PostsState = {
     postsStatus: "idle",
   },
 };
+
+// export const userIdPosts = createSelector(
+//   (state) => state.posts.posts,
+//   (posts) => Object.values(posts).filter((post) => post.userId === 2)
+// );
 
 export const fetchPosts = createAsyncThunk("posts/fetchPosts", async () => {
   try {
